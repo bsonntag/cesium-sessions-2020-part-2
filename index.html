@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/seegno.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>How to make React apps</h1>
+
+            <aside class="notes">
+              Olá e benvindos à segunda de quatro sessões sobre como fazer
+              aplicações web com React. Nestas sessões vou abordar tudo o que
+              precisam de saber para conseguirem criar as vossas aplicações web.
+            </aside>
+          </section>
+          <section>
+            <ol>
+              <li>JavaScript - Beyond the basics</li>
+              <li class="fragment">Getting started with React</li>
+              <li class="fragment">Advanced React</li>
+              <li class="fragment">React Frameworks</li>
+            </ol>
+
+            <aside class="notes">
+              Na sessão anterior fizemos um recap das bases de JavaScript e
+              vimos também algumas partes mais avançadas da linguagem.
+              <br />
+              Hoje vamos começar por rever como se interage com o conteúdo de
+              uma página web a partir de JavaScript. Vou mostrar-vos como usar
+              apenas JavaScript para aplicações complexas se torna complicado, e
+              como frameworks como React surgiram para simplificar esse
+              trabalho.
+              <br />
+              Depois vamos então ver as bases de React, e como React nos permite
+              simplicar a tarefa de interagir com a DOM.
+              <br />
+              Nas duas últimas sessões vamos falar de tópicos mais avançados de
+              React, e vamos ver algumas bibliotecas e frameworks construídas
+              por cima de React.
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Getting started with React</h2>
+
+            <aside class="notes">TODO</aside>
+          </section>
+          <section>
+            <ol>
+              <li class="fragment">Elements & JSX</li>
+              <li class="fragment">Expressions in JSX</li>
+              <li class="fragment">Components</li>
+              <li class="fragment">State</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Interacting with the DOM</h3>
+          </section>
+          <section>
+            <h4>Getting elements from the page</h4>
+            <ul>
+              <li><code>document.getElementById</code></li>
+              <li><code>document.getElementsByClassName</code></li>
+              <li><code>document.querySelector</code></li>
+              <li><code>document.querySelectorAll</code></li>
+            </ul>
+          </section>
+          <section>
+            <h5><code>getElementById</code></h5>
+            <div class="fragment">
+              <pre><code class="html" data-trim data-noescape>
+&lt;button id="my-button"&gt;Click this&lt;/button&gt;
+							</code></pre>
+            </div>
+            <div class="fragment">
+              <pre><code class="js" data-trim data-noescape>
+let button = document.getElementById('my-button');
+							</code></pre>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+                target="_blank"
+                >Documentation</a
+              >
+            </div>
+          </section>
+          <section>
+            <h4>Creating elements</h4>
+            <div class="fragment">
+              <pre><code class="js" data-trim data-noescape>
+let newDiv = document.createElement('div');
+						</code></pre>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+                target="_blank"
+                >Documentation</a
+              >
+            </div>
+          </section>
+          <section>
+            <h4>Adding elements to the page</h4>
+            <div class="fragment">
+              <pre><code class="js" data-trim data-noescape data-line-numbers="1|3-4|">
+let newDiv = document.createElement('div');
+
+let container = document.getElementById('container');
+container.appendChild(newDiv);
+							</code></pre>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+                target="_blank"
+                >Documentation</a
+              >
+            </div>
+          </section>
+          <section>
+            <h4>Handling events</h4>
+            <div class="fragment">
+              <pre><code class="js" data-trim data-noescape data-line-numbers="3-5">
+let button = document.getElementById('my-button');
+
+button.addEventListener('click', event => {
+  console.log('the button has been clicked!');
+});
+							</code></pre>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+                target="_blank"
+                >Documentation</a
+              >
+              <div class="fragment">
+                <a
+                  href="https://codesandbox.io/s/cesium-example-3-zk452?file=/index.html"
+                  target="_blank"
+                  >Example</a
+                >
+              </div>
+              <div class="fragment">
+                <a
+                  href="https://codesandbox.io/s/cesium-example-4-bx0fp?file=/index.html"
+                  target="_blank"
+                  >Another example</a
+                >
+              </div>
+            </div>
+          </section>
+          <section>
+            <a href="https://github.com/bsonntag/bsurl" target="_blank"
+              >Full example</a
+            >
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+              alt="React logo"
+              height="300"
+            />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>JSX, elements & properties</h3>
+            <a
+              href="https://codesandbox.io/s/cesium-react-session-elements-jsx-4wtgc"
+              target="_blank"
+              >Code</a
+            >
+            <p class="fragment">
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-elements-jsx-final-ikr29?file=/src/index.js"
+                target="_blank"
+                >Final</a
+              >
+            </p>
+          </section>
+          <section>
+            <h3>Components</h3>
+            <a
+              href="https://codesandbox.io/s/cesium-react-session-components-x5e5q?file=/src/index.js"
+              target="_blank"
+              >Code</a
+            >
+            <p class="fragment">
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-components-final-mc5en?file=/src/index.js"
+                target="_blank"
+                >Final</a
+              >
+            </p>
+
+            <aside class="notes">TODO</aside>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
