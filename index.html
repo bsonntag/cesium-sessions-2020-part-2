@@ -64,8 +64,6 @@
         <section>
           <section>
             <h2>Getting started with React</h2>
-
-            <aside class="notes">TODO</aside>
           </section>
           <section>
             <ol>
@@ -191,257 +189,348 @@ button.addEventListener('click', event => {
 
         <section>
           <section>
-            <h3>JSX, elements & properties</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-elements-jsx-4wtgc"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <h3>JSX, elements & properties (1/2)</h3>
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-elements-jsx-4wtgc"
+                target="_blank"
+                >Initial code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a
+                href="https://reactjs.org/docs/introducing-jsx.html"
+                target="_blank"
+                >here</a
+              >
+              and
+              <a
+                href="https://reactjs.org/docs/rendering-elements.html"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <ol>
+              <li>
+                Create a <code>&lt;p&gt;</code> element with the content "My
+                first React app"
+              </li>
+              <li>Uncomment the two commented lines to see the result</li>
+              <li>
+                Wrap the <code>&lt;p&gt;</code> in a
+                <code>&lt;main&gt;</code> element
+              </li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>JSX, elements & properties (2/2)</h3>
+            <ol>
+              <li>
+                Add an <code>&lt;h1&gt;</code> inside the
+                <code>&lt;main&gt;</code>, above the <code>&lt;p&gt;</code>
+              </li>
+              <li>Add a className to the <code>&lt;main&gt;</code></li>
+              <li>
+                Move the "My first React app" text to a variable and interpolate
+                it with <code>{}</code>
+              </li>
+              <li>Move the className to a variable and interpolate it</li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-elements-jsx-final-ikr29?file=/src/index.js"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label><input type="checkbox" /> JSX</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> elements</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> children</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> props</label>
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> interpolation in children</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> interpolation in props</label
-                  >
-                </li>
-              </ol>
-            </aside>
           </section>
           <section>
-            <h3>Components</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-components-x5e5q?file=/src/index.js"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <h3>Components (1/2)</h3>
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-components-x5e5q?file=/src/index.js"
+                target="_blank"
+                >Initial Code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a
+                href="https://reactjs.org/docs/components-and-props.html"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <ol>
+              <li>
+                Create a Title component that returns the
+                <code>&lt;h1&gt;</code>
+              </li>
+              <li>Convert the element to an App component</li>
+              <li>
+                Update the <code>ReactDOM.render()</code> call to use the App
+                component
+              </li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>Components (2/2)</h3>
+            <ol>
+              <li>
+                Move both the App and the Title components to a new file, named
+                app.js
+              </li>
+              <li>
+                Move both the App and the Title components to a new file, named
+                app.js
+              </li>
+              <li>
+                Export the App component with the <code>export</code> keyword
+              </li>
+              <li>
+                On the index.js file, import the App component from app.js
+              </li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-components-final-mc5en?file=/src/index.js"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label
-                    ><input type="checkbox" /> extract title component</label
-                  >
-                </li>
-                <li>
-                  <label><input type="checkbox" /> create app component</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> show component props</label>
-                </li>
-              </ol>
-            </aside>
           </section>
           <section>
-            <h3>Events</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-events-5tjpg?file=/src/app.js"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <h3>Events (1/2)</h3>
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-events-5tjpg?file=/src/app.js"
+                target="_blank"
+                >Code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a
+                href="https://reactjs.org/docs/handling-events.html"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <ol>
+              <li>
+                Add an onClick prop to the first button and pass a function that
+                logs "click" to the console
+              </li>
+              <li>
+                Add an onChange prop to the input and pass a function that logs
+                the input's value (<code>event.target.value</code>)
+              </li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>Events (2/2)</h3>
+            <ol>
+              <li>
+                Add an onSubmit prop to the form and pass a function that:
+                <ol>
+                  <li>Calls <code>event.preventDefault()</code></li>
+                  <li>Logs "submit" to the console</li>
+                  <li>
+                    Logs the name input's value to the console
+                    (<code>event.target.elements.name.value</code>,<br />or try
+                    to use
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"
+                      target="_blank"
+                      >FormData</a
+                    >)
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-events-final-1ev92?file=/src/app.js"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label><input type="checkbox" /> add onClick to button</label>
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> create a form with an
-                    input</label
-                  >
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add onChange to input</label>
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> add submit button to form</label
-                  >
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add onSubmit to form</label>
-                </li>
-              </ol>
-            </aside>
           </section>
           <section>
-            <h3>State</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-state-n7567?file=/src/app.js"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <h3>State (1/3)</h3>
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-state-n7567?file=/src/app.js"
+                target="_blank"
+                >Initial Code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a
+                href="https://reactjs.org/docs/hooks-state.html"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <ol>
+              <li>Import useState from React</li>
+              <li>
+                Add a count state to the App component, with the initial value
+                of <code>0</code>
+              </li>
+              <li>
+                Update the button's onClick prop to increments the count state
+              </li>
+              <li>Interpolate the count in the paragraph</li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>State (2/3)</h3>
+            <ol>
+              <li>
+                Add a name state to the App component, with an empty string as
+                its initial value
+              </li>
+              <li>
+                Update the input's onChange prop to update the name state with
+                the input's value
+              </li>
+              <li>
+                Add a value prop to the input, to keep the input's value
+                syncronized with the App component's state
+              </li>
+              <li>
+                Interpolate the name state in the paragraph above the form
+              </li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>State (3/3)</h3>
+            <ol>
+              <li>
+                Create a new Counter component, that renders the button and the
+                paragraph with the count (don't forget the
+                <a
+                  href="https://reactjs.org/docs/fragments.html"
+                  target="_blank"
+                  >fragment</a
+                >
+                <code>&lt;&gt;</code>)
+              </li>
+              <li>Render the Counter component inside the App component</li>
+              <li>
+                Render the Counter component two times to see that each instance
+                has its own state
+              </li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-state-final-402n1?file=/src/app.js"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label><input type="checkbox" /> import useState</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add count state</label>
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> increment count in onClick</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> update paragraph with
-                    count</label
-                  >
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add form with input</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add name state</label>
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> add onChange to input that
-                    updates name state</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> add paragraph that shows
-                    name</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> move counter to new
-                    component</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> mount counter component two times
-                    to show that each has its own state</label
-                  >
-                </li>
-              </ol>
-            </aside>
           </section>
           <section>
             <h3>Conditional rendering</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-conditional-rendering-6e0w5?file=/src/app.js"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-conditional-rendering-6e0w5?file=/src/app.js"
+                target="_blank"
+                >Initial Code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a
+                href="https://reactjs.org/docs/conditional-rendering.html"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <ol>
+              <li>
+                Add a "Congrats!" message that only appears when count is 10 or
+                more
+              </li>
+              <li>
+                Hide the button and the paragraph with the click count when the
+                count is 10 or more
+              </li>
+              <li>Add a button that resets the count when clicked</li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-conditional-rendering-final-ymm7m?file=/src/app.js:117-118"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label
-                    ><input type="checkbox" /> add paragraph that appears when
-                    count >= 10</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" /> update code to hide counter when
-                    count >= 10</label
-                  >
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add reset button</label>
-                </li>
-              </ol>
-            </aside>
           </section>
           <section>
-            <h3>Lists</h3>
-            <a
-              href="https://codesandbox.io/s/cesium-react-session-lists-zvfus?file=/src/app.js"
-              target="_blank"
-              >Code</a
-            >
-            <p class="fragment">
+            <h3>Lists (1/2)</h3>
+            <p>
+              <a
+                href="https://codesandbox.io/s/cesium-react-session-lists-zvfus?file=/src/app.js"
+                target="_blank"
+                >Initial Code</a
+              >
+            </p>
+            <p>
+              Documentation
+              <a href="https://reactjs.org/docs/lists-and-keys.html">here</a>
+            </p>
+            <ol>
+              <li>
+                Add a state to hold the to-dos array, with an empty array as its
+                initial state
+              </li>
+              <li>
+                Update the form's onSubmit prop to add the newTodo to the todos
+                state (use the
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+                  target="_blank"
+                  >concat</a
+                >
+                method or create a new array and spread the current todos)
+              </li>
+            </ol>
+            <p>Continues on next slide</p>
+          </section>
+          <section>
+            <h3>Lists (2/2)</h3>
+            <ol>
+              <li>
+                Use the
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+                  target="_blank"
+                  >map</a
+                >
+                method to transform the array of todos into an array of
+                <code>&lt;li&gt;</code> and render it inside an
+                <code>&lt;ul&gt;</code> (don't forget the key prop on each
+                <code>&lt;li&gt;</code>)
+              </li>
+              <li>
+                Add a button to each todo that deletes the todo when clicked
+              </li>
+            </ol>
+            <p>
               <a
                 href="https://codesandbox.io/s/cesium-react-session-lists-final-6dop3?file=/src/app.js"
                 target="_blank"
                 >Final</a
               >
             </p>
-
-            <aside class="notes">
-              <ol>
-                <li>
-                  <label><input type="checkbox" /> add todos state</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add onSubmit to form</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> explain array.map</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> render todos</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> explain key</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" /> add delete button</label>
-                </li>
-              </ol>
-            </aside>
           </section>
         </section>
 
